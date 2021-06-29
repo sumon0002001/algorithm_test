@@ -8,7 +8,7 @@
             <div class="me-auto d-flex">
                 <%= link_to "Home", root_path, class: 'nav-link text-dark'%>
                 <%= link_to "About", about_path, class: 'nav-link text-dark'%>
-                <%= link_to "Account", user_path(session[:user_id]), class: 'nav-link text-dark' if session['user_id']%>
+                <%= link_to "Profile", user_path(session[:user_id]), class: 'nav-link text-dark' if session['user_id']%>
             </div>
             <div class="d-flex me-5">
                 <%= link_to 'Login',  new_regestrations_path, {class: 'btn btn-secondary'} if !session['user_id'] %>

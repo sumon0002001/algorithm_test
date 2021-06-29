@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     redirect_to root_path, notice: "There is no such user" and return  if !@user 
     
     if @user.id != session[:user_id]
-      redirect_to root_path , notice: "You shall not pass"
+      redirect_to root_path , notice: "Error"
     end
   end
 
