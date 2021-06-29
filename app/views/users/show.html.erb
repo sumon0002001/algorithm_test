@@ -1,0 +1,17 @@
+<div class="p-3 mt-3 bg-primary text-white">
+    <h2 class="d-flex text-center"><span class="fw-bold">Name:</span><%= @user.name %></h2>
+    <br>
+    <h3><span class="fw-bold">Email:</span> <%= @user.email %></h3>
+    <br>
+    <h4 class="fw-bold">History</h4>
+    <br>
+    <ul class="list-group-item list-group-item-info">
+        <% @user.results.each do |result| %>
+        <li class="d-flex justify-content-between mx-5 px-5">
+            <p>Full string: <%= result.full_string%></p>
+            <p>Longest substring: <%= result.longest_sub%></p>
+            <p>longest substring length: <%= result.longest_sub_length%></p>
+        </li>
+        <%end%>
+    </ul>
+</div>
